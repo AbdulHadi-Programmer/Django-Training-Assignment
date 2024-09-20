@@ -115,7 +115,7 @@ a:hover {
         <h1>SignUP</h1>
 
         <label for="1">Username</label>
-        <input type="text" name="username"id="1" required>
+        <input type="text" name="username" id="1" required>
         <br>
         <br>
         
@@ -137,9 +137,3 @@ a:hover {
     </form>
 </body>
 </html>
-
-from django.contrib.auth.models import User
-user = User.objects.get(username='abdullah')  # Replace 'abdullah' with the correct username
-user.is_staff = True  # Give the user staff privileges
-user.is_superuser = True  # Make the user a superuser (optional, but ensures full admin access)
-user.save()  # Save the changes

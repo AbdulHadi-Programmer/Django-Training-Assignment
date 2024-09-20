@@ -19,6 +19,7 @@ def login_page(request):
 
     return render(request, 'login.html', {'result': result})  # Render login.html
 
+
 def signup_page(request):
     if request.method == "POST":
         username = request.POST.get('username')
@@ -31,9 +32,11 @@ def signup_page(request):
 
     return render(request, "signup.html")  # Render signup.html
 
+
 def logoutpage(request):
     logout(request)
     return redirect("login")
+
 
 @login_required(login_url='login')
 def home(request):
